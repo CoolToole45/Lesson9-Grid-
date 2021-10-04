@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: blue;
+}
+
+.Grid_Box {
+	width: 100%;
+	max-width: 1200px;
+	margin: 20px 20px 0;
+}
+
+.Grid_Container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 300px);
+	grid-template-rows: repeat(4, 150px);
+	grid-template-areas:
+	'Masonry_I Responsive Overlap Overlap'
+	'Masonry_I Fluid Explicitly_Placed Negative_Space'
+	'Flexible_Breadth Masonry_II Explicitly_Placed Masonry_III'
+	'DOM_Order Masonry_II Named_Tracks Named_Tracks'
+}
+
+.Grid {
+	font-size: 20px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Grid_Item_1 {
+	grid-area: Masonry_I;
+}
+
+.Grid_Item_3 {
+	grid-area: Overlap;
+}
+
+.Grid_Item_5 {
+	grid-area: Explicitly_Placed;
+}
+
+.Grid_Item_8 {
+	grid-area: Masonry_II;
+}
+
+.Grid_Item_11 {
+	grid-area: Named_Tracks;
+}
